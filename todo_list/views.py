@@ -21,7 +21,7 @@ def home(request):
 def delete(request, list_id):
     item = List.objects.get(pk=list_id)
     item.delete()
-    messages.success(request, ('Item Has BEEN Deleted!'))
+    messages.success(request, ('Item Has BEEN Deleted by me!'))
     return redirect('home')
 
 
