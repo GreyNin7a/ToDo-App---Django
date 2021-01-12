@@ -10,7 +10,7 @@ def home(request):
         if form.is_valid():
             form.save()
             all_items = List.objects.all
-            messages.success(request, ('Item Has Been Added To List!'))
+            messages.success(request, ('Item Has Been Added To List by me!'))
             return render(request, 'home.html', {'all_items': all_items})
 
     else:
